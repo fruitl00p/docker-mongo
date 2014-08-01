@@ -1,10 +1,9 @@
 # Lean and mean
-docker build -t kingsquare/mongodb .
 MONGO_ID=$(docker run \
 	-P \
 	-d \
 	-v /data/docker/volumes/mongodb:/data/db \
-	kingsquare/mongodb \
+	gekkie/docker-mongo \
 	--nojournal \
 	--quiet \
 	--nohttpinterface \
