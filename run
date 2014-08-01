@@ -1,0 +1,17 @@
+# Lean and mean
+docker build -t kingsquare/mongodb .
+MONGO_ID=$(docker run \
+	-P \
+	-d \
+	-v /data/docker/volumes/mongodb:/data/db \
+	kingsquare/mongodb \
+	--nojournal \
+	--quiet \
+	--nohttpinterface \
+	--noprealloc \
+	--smallfiles \
+	--dbpath /data/db
+	)
+echo "Running via $MONGO_ID"
+echo "see the logs via: docker logs $MONGO_ID"
+
