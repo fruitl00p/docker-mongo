@@ -6,16 +6,16 @@ A simple mongo docker defintion for running mongodb
 Running
 ===
 
-docker run \
-	-d \
-	-v /data/mongodb:/data/db \
-	gekkie/docker-mongo \
-	--nojournal \
-	--quiet \
-	--nohttpinterface \
-	--noprealloc \
-	--smallfiles \
-	--dbpath /data/db
+    docker run \
+        -d \
+        -v /data/mongodb:/data/db \
+        gekkie/docker-mongo \
+        --nojournal \
+        --quiet \
+        --nohttpinterface \
+        --noprealloc \
+        --smallfiles \
+        --dbpath /data/db
 
 Configuration
 ===
